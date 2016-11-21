@@ -11,7 +11,7 @@
 // Changelog:
 // 24/09/2015	changed domain name from t411.io to t411.in
 
-var t411_domain = 'www.t411.ch'
+var t411_domain = 'www.t411.li'
 
 var search_base_link = 'http://' + t411_domain + '/torrents/search/?search=';
 var search_prefix = '';
