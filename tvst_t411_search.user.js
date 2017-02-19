@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        TVShow Time - T411 search button
 // @description Provide a "Search in T411" button in the "To watch" page
-// @namespace   pillowdev.tvst-t411-search
+// @namespace   https://greasyfork.org/scripts/11571-tvshow-time-t411-search-button
 // @include     http*://www.tvshowtime.com/*
 // @version     0.2
 // @grant       none
@@ -10,10 +10,12 @@
 
 // Changelog:
 // 24/09/2015	changed domain name from t411.io to t411.in
+// 21/09/2016   changed domain name from t411.ch to t411.li
 
-var t411_domain = 'www.t411.li'
+var t411_domain = 'www.t411.li';
 
 var search_base_link = 'http://' + t411_domain + '/torrents/search/?search=';
+
 var search_prefix = '';
 var search_suffix = '';
 
@@ -24,16 +26,15 @@ jQuery(document).ready(function() {
 
   jQuery('li[id*="episode-item-"]').each(function () {
     try {
-      var newNode = jQuery(this).find("a.subs-btn:first").clone();
+      var newNode = jQuery(this).find("a.watched-btn:first").clone();
       var serie = jQuery(this).find("div.episode-details a.secondary-link").text();
       var episode = jQuery(this).find("div.episode-details h2 a").text();
-      newNode.attr('href', search_base_link + search_prefix + ' ' + serie + ' ' + episode + ' ' + search_suffix);
+      newNode.attr('href', search_base_link + search_prefix + serie + ' ' + episode + search_suffix);
       newNode.attr('target', '_blank');
       newNode.attr('data-original-title', 'Search on T411');
       newNode.removeClass().addClass('download-link');
-
-      newNode.find('i').removeClass().html('&nbsp;&nbsp;');
-      jQuery(this).find("a.subs-btn:first").before(newNode);
+      newNode.find('i').removeClass();
+      jQuery(this).find("a.watched-btn:first").before(newNode);
     } catch(e) {
       console.error(e);
     }
