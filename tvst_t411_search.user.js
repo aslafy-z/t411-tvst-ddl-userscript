@@ -3,7 +3,7 @@
 // @description Provide a "Search in T411" button in the "To watch" page
 // @namespace   https://greasyfork.org/scripts/11571-tvshow-time-t411-search-button
 // @include     http*://www.tvshowtime.com/*
-// @version     0.2
+// @version     0.3
 // @grant       none
 // @require     https://code.jquery.com/jquery-2.1.3.min.js
 // ==/UserScript==
