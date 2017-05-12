@@ -2,7 +2,7 @@
 // @name        TVShow Time - T411 search button
 // @description Provide a "Search in T411" button in the "To watch" page
 // @namespace   https://greasyfork.org/scripts/11571-tvshow-time-t411-search-button
-// @include     http*://www.tvshowtime.com/*
+// @include     http*://www.tvtime.com/*
 // @version     0.3
 // @grant       none
 // @require     https://code.jquery.com/jquery-2.1.3.min.js
@@ -12,7 +12,7 @@
 // 24/09/2015	changed domain name from t411.io to t411.in
 // 21/09/2016   changed domain name from t411.ch to t411.li
 
-var t411_domain = 'www.t411.li';
+var t411_domain = 'www.t411.al';
 
 var search_base_link = 'http://' + t411_domain + '/torrents/search/?search=';
 
